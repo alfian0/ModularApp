@@ -21,6 +21,7 @@ public enum NetworkError: Error {
     case pageNotFound
     case somethingWentWrong
     case unknown
+    case certificationError
     case softError(message: String)
     
     public var description: String {
@@ -49,6 +50,8 @@ public enum NetworkError: Error {
             return "Something When Wrong"
         case .unknown:
             return "Unknown error"
+        case .certificationError:
+            return "Certification error"
         case .softError(let message):
             return message
         }

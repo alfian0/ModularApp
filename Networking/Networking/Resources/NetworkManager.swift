@@ -18,7 +18,10 @@ public struct NetworkManager {
     @discardableResult
     public func requestObject<T: EndPointType>(_ t: T, completion: @escaping (Result<Bool, NetworkError>) -> Void) -> String {
         return router.request(t as! ServiceAPI) { (data, response, error) in
-            guard let response = response as? HTTPURLResponse else { return }
+            guard let response = response as? HTTPURLResponse else {
+                completion(.failure(.certificationError))
+                return
+            }
             switch self.handleNetworkResponse(response) {
             case .success:
                 if let data = data, error == nil {
@@ -65,7 +68,10 @@ public struct NetworkManager {
     @discardableResult
     public func requestObject<T: EndPointType, C: Decodable>(_ t: T, c: C.Type, completion: @escaping (Result<C, NetworkError>) -> Void) -> String {
         return router.request(t as! ServiceAPI) { (data, response, error) in
-            guard let response = response as? HTTPURLResponse else { return }
+            guard let response = response as? HTTPURLResponse else {
+                completion(.failure(.certificationError))
+                return
+            }
             switch self.handleNetworkResponse(response) {
             case .success:
                 if let data = data, error == nil {

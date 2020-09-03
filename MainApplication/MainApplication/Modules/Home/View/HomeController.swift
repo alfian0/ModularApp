@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Networking
+import Repository
 
 class HomeController: UIViewController {
     private var viewModel: IHomeViewModel!
@@ -24,6 +26,21 @@ class HomeController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        NetworkManager.instance.requestObject(ServiceAPI.list) { (result) in
+            switch result {
+            case .success(let isSuccess):
+                print(isSuccess)
+            case .failure(let error):
+                print(error.description)
+            }
+        }
+        
+        let repository = UserDataRepository()
+        if let accounts = repository.getAll(), accounts.count == 0 {
+            repository.create(user: UserModel(id: UUID().uuidString, name: "Muhammad Alfiansyah", phone: "087738091779", email: "alfian.offcial.mail@gmail.com", birthDate: Date(), gender: "L", profile: "https://cdn.business2community.com/wp-content/uploads/2014/04/profile-picture-300x300.jpg"))
+        } else {
+            
+        }
     }
 
 }

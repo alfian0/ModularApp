@@ -17,11 +17,16 @@ protocol NetworkRouter {
     func cancel()
 }
 
-class Router<EndPoint: EndPointType>: NetworkRouter {
+class Router<EndPoint: EndPointType>: NSObject, URLSessionDelegate, NetworkRouter {
     private var task: [String:URLSessionTask] = [:]
+    private lazy var session: URLSession = {
+        let session = URLSession(configuration: URLSessionConfiguration.default,
+                   delegate: self,
+                   delegateQueue: nil)
+        return session
+    }()
     
     func request(_ route: EndPoint, completion: @escaping NetworkRouterCompletion) -> String {
-        let session = URLSession.shared
         do {
             let request = try self.buildRequest(from: route)
             self.task[request.url!.absoluteString] = session.dataTask(with: request, completionHandler: { (data, response, error) in
@@ -126,6 +131,31 @@ class Router<EndPoint: EndPointType>: NetworkRouter {
         guard let headers = additionalHeaders else { return }
         for (key, value) in headers {
             request.setValue(value, forHTTPHeaderField: key)
+        }
+    }
+    
+    func urlSession(_ session: URLSession, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
+        let serverTrust = challenge.protectionSpace.serverTrust
+        let certificate = SecTrustGetCertificateAtIndex(serverTrust!, 0)
+
+        // Set SSL policies for domain name check
+        let policies = NSMutableArray();
+        policies.add(SecPolicyCreateSSL(true, (challenge.protectionSpace.host) as CFString))
+        SecTrustSetPolicies(serverTrust!, policies);
+
+        // Evaluate server certificate
+        var result: SecTrustResultType = SecTrustResultType(rawValue: 0)!
+        SecTrustEvaluate(serverTrust!, &result)
+        
+        let isServerTrusted: Bool = (result == SecTrustResultType.unspecified || result == SecTrustResultType.proceed)
+
+        let remoteCertificateData: NSData = SecCertificateCopyData(certificate!)
+
+        if (isServerTrusted && remoteCertificateData.isEqual(to: Certificates.themoviedbData)) {
+            let credential:URLCredential = URLCredential(trust: serverTrust!)
+            completionHandler(.useCredential, credential)
+        } else {
+            completionHandler(.cancelAuthenticationChallenge, nil)
         }
     }
 }
