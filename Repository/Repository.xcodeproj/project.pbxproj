@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2B586BDD13CFE5C2F8CB1EBC /* Pods_Repository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EDA5786A353A6E437F633A4 /* Pods_Repository.framework */; };
+		D53AB52A2500F2B000309D3A /* CDUser+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53AB5292500F2B000309D3A /* CDUser+extension.swift */; };
 		D5F94E9D24FE3264009E0E33 /* Repository.h in Headers */ = {isa = PBXBuildFile; fileRef = D5F94E9B24FE3264009E0E33 /* Repository.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D5F94EA824FE3335009E0E33 /* PresistentStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F94EA524FE3335009E0E33 /* PresistentStorage.swift */; };
 		D5F94EA924FE3335009E0E33 /* UserDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F94EA724FE3335009E0E33 /* UserDataRepository.swift */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		34C57C931F45138D8F7A5C52 /* Pods-Repository.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Repository.release.xcconfig"; path = "Target Support Files/Pods-Repository/Pods-Repository.release.xcconfig"; sourceTree = "<group>"; };
 		6EDA5786A353A6E437F633A4 /* Pods_Repository.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Repository.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D53AB5292500F2B000309D3A /* CDUser+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDUser+extension.swift"; sourceTree = "<group>"; };
 		D5F94E9824FE3264009E0E33 /* Repository.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Repository.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5F94E9B24FE3264009E0E33 /* Repository.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Repository.h; sourceTree = "<group>"; };
 		D5F94E9C24FE3264009E0E33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 			children = (
 				D5F94EBD24FE36EF009E0E33 /* CDUser+CoreDataClass.swift */,
 				D5F94EBE24FE36EF009E0E33 /* CDUser+CoreDataProperties.swift */,
+				D53AB5292500F2B000309D3A /* CDUser+extension.swift */,
 				D5F94EB624FE3617009E0E33 /* UserModeled.xcdatamodeld */,
 				D5F94EC124FE386F009E0E33 /* Model */,
 				D5F94EA424FE3335009E0E33 /* CoreDataSupportFiles */,
@@ -233,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5F94EA924FE3335009E0E33 /* UserDataRepository.swift in Sources */,
+				D53AB52A2500F2B000309D3A /* CDUser+extension.swift in Sources */,
 				D5F94EC024FE36EF009E0E33 /* CDUser+CoreDataProperties.swift in Sources */,
 				D5F94EA824FE3335009E0E33 /* PresistentStorage.swift in Sources */,
 				D5F94EB824FE3617009E0E33 /* UserModeled.xcdatamodeld in Sources */,

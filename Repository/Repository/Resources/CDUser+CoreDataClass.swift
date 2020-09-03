@@ -12,13 +12,5 @@ import CoreData
 
 @objc(CDUser)
 public class CDUser: NSManagedObject {
-    func convertToUser() -> UserModel {
-        return UserModel(id: id,
-                         name: name,
-                         phone: phone,
-                         email: email,
-                         birthDate: birthDate,
-                         gender: gender,
-                         profile: profile)
-    }
+    
 }
