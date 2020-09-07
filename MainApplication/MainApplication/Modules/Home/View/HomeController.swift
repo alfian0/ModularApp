@@ -31,7 +31,9 @@ class HomeController: UIViewController {
             case .success(let data):
                 print(data.genres.first?.name)
             case .failure(let error):
-                print(error.description)
+                let alert = UIAlertController(title: "Error", message: error.description, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
             }
         }
         
@@ -40,7 +42,9 @@ class HomeController: UIViewController {
             case .success(let isSuccess):
                 print(isSuccess)
             case .failure(let error):
-                print(error.description)
+                let alert = UIAlertController(title: "Error", message: error.description, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Cancel", style: .default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
             }
         }
         

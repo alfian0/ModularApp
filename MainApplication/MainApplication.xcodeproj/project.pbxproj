@@ -7,18 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C2B50A052D4B6E3C0E424E72 /* Pods_MainApplication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B71B7D06F84451B200D3F94 /* Pods_MainApplication.framework */; };
 		D57A37CC250604A800318DD1 /* GenresResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57A37CB250604A800318DD1 /* GenresResponse.swift */; };
+		D57A37CE25062C8A00318DD1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D57A37CD25062C8A00318DD1 /* GoogleService-Info.plist */; };
+		D57A37D0250637E400318DD1 /* AuthManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5F94EFC24FF657C009E0E33 /* AuthManager.framework */; };
+		D57A37D1250637E400318DD1 /* AuthManager.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D5F94EFC24FF657C009E0E33 /* AuthManager.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D57A37D3250637E500318DD1 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5F94E8C24FE2AF8009E0E33 /* Networking.framework */; };
+		D57A37D4250637E500318DD1 /* Networking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D5F94E8C24FE2AF8009E0E33 /* Networking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D57A37D5250637E700318DD1 /* Pods_MainApplication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B71B7D06F84451B200D3F94 /* Pods_MainApplication.framework */; };
+		D57A37D6250637E700318DD1 /* Pods_MainApplication.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1B71B7D06F84451B200D3F94 /* Pods_MainApplication.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D57A37D7250637E800318DD1 /* Repository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5F94EB424FE3545009E0E33 /* Repository.framework */; };
+		D57A37D8250637E800318DD1 /* Repository.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D5F94EB424FE3545009E0E33 /* Repository.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D5F94E7824FE26FF009E0E33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F94E7724FE26FF009E0E33 /* AppDelegate.swift */; };
 		D5F94E8124FE26FF009E0E33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D5F94E8024FE26FF009E0E33 /* Assets.xcassets */; };
 		D5F94E8424FE26FF009E0E33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5F94E8224FE26FF009E0E33 /* LaunchScreen.storyboard */; };
-		D5F94E8D24FE2AF8009E0E33 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5F94E8C24FE2AF8009E0E33 /* Networking.framework */; };
-		D5F94EB524FE3545009E0E33 /* Repository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5F94EB424FE3545009E0E33 /* Repository.framework */; };
 		D5F94ECC24FF5E7A009E0E33 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F94ECA24FF5E7A009E0E33 /* HomeController.swift */; };
 		D5F94ECD24FF5E7A009E0E33 /* HomeController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5F94ECB24FF5E7A009E0E33 /* HomeController.xib */; };
 		D5F94ECF24FF5E8C009E0E33 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F94ECE24FF5E8C009E0E33 /* HomeViewModel.swift */; };
 		D5F94ED124FF5EFB009E0E33 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F94ED024FF5EFB009E0E33 /* AppRouter.swift */; };
-		D5F94EFD24FF657C009E0E33 /* AuthManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5F94EFC24FF657C009E0E33 /* AuthManager.framework */; };
 		D5F94EFF24FF6A13009E0E33 /* HomeAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F94EFE24FF6A13009E0E33 /* HomeAssembly.swift */; };
 		D5F94F0624FF8C4A009E0E33 /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F94F0424FF8C4A009E0E33 /* DetailController.swift */; };
 		D5F94F0724FF8C4B009E0E33 /* DetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D5F94F0524FF8C4A009E0E33 /* DetailController.xib */; };
@@ -26,11 +31,29 @@
 		D5F94F0B24FF8C9C009E0E33 /* DetailAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F94F0A24FF8C9C009E0E33 /* DetailAssembly.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		D57A37D2250637E400318DD1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D57A37D8250637E800318DD1 /* Repository.framework in Embed Frameworks */,
+				D57A37D6250637E700318DD1 /* Pods_MainApplication.framework in Embed Frameworks */,
+				D57A37D4250637E500318DD1 /* Networking.framework in Embed Frameworks */,
+				D57A37D1250637E400318DD1 /* AuthManager.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		1B71B7D06F84451B200D3F94 /* Pods_MainApplication.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MainApplication.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4417D584513728CD407855C9 /* Pods-MainApplication.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MainApplication.debug.xcconfig"; path = "Target Support Files/Pods-MainApplication/Pods-MainApplication.debug.xcconfig"; sourceTree = "<group>"; };
 		AB15E9522A1A820C06B545AB /* Pods-MainApplication.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MainApplication.release.xcconfig"; path = "Target Support Files/Pods-MainApplication/Pods-MainApplication.release.xcconfig"; sourceTree = "<group>"; };
 		D57A37CB250604A800318DD1 /* GenresResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresResponse.swift; sourceTree = "<group>"; };
+		D57A37CD25062C8A00318DD1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D5F94E7424FE26FF009E0E33 /* MainApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MainApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5F94E7724FE26FF009E0E33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5F94E8024FE26FF009E0E33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -55,10 +78,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5F94EFD24FF657C009E0E33 /* AuthManager.framework in Frameworks */,
-				D5F94EB524FE3545009E0E33 /* Repository.framework in Frameworks */,
-				D5F94E8D24FE2AF8009E0E33 /* Networking.framework in Frameworks */,
-				C2B50A052D4B6E3C0E424E72 /* Pods_MainApplication.framework in Frameworks */,
+				D57A37D7250637E800318DD1 /* Repository.framework in Frameworks */,
+				D57A37D5250637E700318DD1 /* Pods_MainApplication.framework in Frameworks */,
+				D57A37D3250637E500318DD1 /* Networking.framework in Frameworks */,
+				D57A37D0250637E400318DD1 /* AuthManager.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +125,7 @@
 				D5F94E8024FE26FF009E0E33 /* Assets.xcassets */,
 				D5F94E8224FE26FF009E0E33 /* LaunchScreen.storyboard */,
 				D5F94E8524FE26FF009E0E33 /* Info.plist */,
+				D57A37CD25062C8A00318DD1 /* GoogleService-Info.plist */,
 			);
 			path = MainApplication;
 			sourceTree = "<group>";
@@ -217,6 +241,8 @@
 				D5F94E7124FE26FF009E0E33 /* Frameworks */,
 				D5F94E7224FE26FF009E0E33 /* Resources */,
 				09BA54932B19974127548FAA /* [CP] Embed Pods Frameworks */,
+				D57A37CF25062F2D00318DD1 /* ShellScript */,
+				D57A37D2250637E400318DD1 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -267,6 +293,7 @@
 			files = (
 				D5F94F0724FF8C4B009E0E33 /* DetailController.xib in Resources */,
 				D5F94E8424FE26FF009E0E33 /* LaunchScreen.storyboard in Resources */,
+				D57A37CE25062C8A00318DD1 /* GoogleService-Info.plist in Resources */,
 				D5F94ECD24FF5E7A009E0E33 /* HomeController.xib in Resources */,
 				D5F94E8124FE26FF009E0E33 /* Assets.xcassets in Resources */,
 			);
@@ -313,6 +340,25 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MainApplication/Pods-MainApplication-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		D57A37CF25062F2D00318DD1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -467,6 +513,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9GE8EQEDQB;
 				INFOPLIST_FILE = MainApplication/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -486,6 +533,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9GE8EQEDQB;
 				INFOPLIST_FILE = MainApplication/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -10,6 +10,8 @@ end
 target 'MainApplication' do
   project 'MainApplication/MainApplication.xcodeproj'
   common
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Crashlytics'
 end
 
 target 'Repository' do

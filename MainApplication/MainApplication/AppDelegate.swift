@@ -8,6 +8,7 @@
 
 import UIKit
 import AuthManager
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -26,6 +27,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         } else {
             AppRouter.shared.presentModule(module: .Home, parameters: [:])
         }
+        
+        FirebaseApp.configure()
         
         return true
     }

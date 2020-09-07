@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>126340447969-gqhjlca74kp9fe5m13qi9u5thoei1n97.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.126340447969-gqhjlca74kp9fe5m13qi9u5thoei1n97</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBVlxJnW2L3d4Fl7qLNilvpFv5rFDYUb_I</string>
+	<key>GCM_SENDER_ID</key>
+	<string>126340447969</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>id.alfian.MainApplication</string>
+	<key>PROJECT_ID</key>
+	<string>monolith-15787</string>
+	<key>STORAGE_BUCKET</key>
+	<string>monolith-15787.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:126340447969:ios:f020b92bf7e2c7d168c1a0</string>
+	<key>DATABASE_URL</key>
+	<string>https://monolith-15787.firebaseio.com</string>
+</dict>
+</plist>
