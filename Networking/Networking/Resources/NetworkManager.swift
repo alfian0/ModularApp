@@ -12,6 +12,14 @@ import AuthManager
 public struct NetworkManager {
     public static let instance = NetworkManager()
     private let router = Router<ServiceAPI>()
+    private let jsonDecoder: JSONDecoder = {
+        let jsonDecoder = JSONDecoder()
+        jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-mm-dd"
+        jsonDecoder.dateDecodingStrategy = .formatted(dateFormatter)
+        return jsonDecoder
+    }()
     
     private init() {}
     
@@ -153,25 +161,25 @@ public struct NetworkManager {
         }
         
         do {
-             let data = try JSONDecoder().decode(c, from: data)
-             return .success(data)
+            let data = try self.jsonDecoder.decode(c.self, from: data)
+            return .success(data)
          } catch let DecodingError.dataCorrupted(context) {
-             print(context)
-             return .failure(NetworkError.unableToDecode)
+            print(context)
+            return .failure(NetworkError.unableToDecode)
          } catch let DecodingError.keyNotFound(key, context) {
-             print("Key '\(key)' not found:", context.debugDescription)
-             print("codingPath:", context.codingPath)
-             return .failure(NetworkError.unableToDecode)
+            print("Key '\(key)' not found:", context.debugDescription)
+            print("codingPath:", context.codingPath)
+            return .failure(NetworkError.unableToDecode)
         } catch let DecodingError.valueNotFound(value, context) {
-             print("Value '\(value)' not found:", context.debugDescription)
-             print("codingPath:", context.codingPath)
-             return .failure(NetworkError.unableToDecode)
+            print("Value '\(value)' not found:", context.debugDescription)
+            print("codingPath:", context.codingPath)
+            return .failure(NetworkError.unableToDecode)
         } catch let DecodingError.typeMismatch(type, context)  {
-             print("Type '\(type)' mismatch:", context.debugDescription)
-             print("codingPath:", context.codingPath)
-             return .failure(NetworkError.unableToDecode)
+            print("Type '\(type)' mismatch:", context.debugDescription)
+            print("codingPath:", context.codingPath)
+            return .failure(NetworkError.unableToDecode)
          } catch {
-             return .failure(NetworkError.unknown)
+            return .failure(NetworkError.unknown)
          }
     }
 }

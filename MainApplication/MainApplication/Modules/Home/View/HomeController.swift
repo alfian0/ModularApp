@@ -26,6 +26,15 @@ class HomeController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        NetworkManager.instance.requestObject(ServiceAPI.list, c: GenresResponse.self) { (result) in
+            switch result {
+            case .success(let data):
+                print(data.genres.first?.name)
+            case .failure(let error):
+                print(error.description)
+            }
+        }
+        
         NetworkManager.instance.requestObject(ServiceAPI.list) { (result) in
             switch result {
             case .success(let isSuccess):
