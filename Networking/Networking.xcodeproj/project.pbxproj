@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		979A090B96F158ECE0731FD5 /* Pods_Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07ED45B0E7447AE2D08C77FB /* Pods_Networking.framework */; };
+		D5103A3625076ABD0026B881 /* NetworkingGlobalConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5103A3525076ABD0026B881 /* NetworkingGlobalConstant.swift */; };
 		D53AB5232500CFCD00309D3A /* Certificates.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53AB5222500CFCD00309D3A /* Certificates.swift */; };
 		D53AB5272500E9B800309D3A /* google.der in Resources */ = {isa = PBXBuildFile; fileRef = D53AB5252500E6A900309D3A /* google.der */; };
 		D53AB5282500E9BC00309D3A /* *.themoviedb.org.cer in Resources */ = {isa = PBXBuildFile; fileRef = D53AB5262500E8CB00309D3A /* *.themoviedb.org.cer */; };
@@ -32,6 +33,7 @@
 /* Begin PBXFileReference section */
 		07ED45B0E7447AE2D08C77FB /* Pods_Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		19B1CCF36A834B07C3908694 /* Pods-Networking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Networking.debug.xcconfig"; path = "Target Support Files/Pods-Networking/Pods-Networking.debug.xcconfig"; sourceTree = "<group>"; };
+		D5103A3525076ABD0026B881 /* NetworkingGlobalConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingGlobalConstant.swift; sourceTree = "<group>"; };
 		D53AB5222500CFCD00309D3A /* Certificates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Certificates.swift; sourceTree = "<group>"; };
 		D53AB5252500E6A900309D3A /* google.der */ = {isa = PBXFileReference; lastKnownFileType = file; path = google.der; sourceTree = "<group>"; };
 		D53AB5262500E8CB00309D3A /* *.themoviedb.org.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = "*.themoviedb.org.cer"; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				D5F94E4124FE1F2D009E0E33 /* ErrorResponse.swift */,
+				D5103A3525076ABD0026B881 /* NetworkingGlobalConstant.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				D5F94E3924FE1E11009E0E33 /* NetworkState.swift in Sources */,
 				D5F94E3C24FE1E11009E0E33 /* NetworkError.swift in Sources */,
 				D53AB5232500CFCD00309D3A /* Certificates.swift in Sources */,
+				D5103A3625076ABD0026B881 /* NetworkingGlobalConstant.swift in Sources */,
 				D5F94E3124FE1E11009E0E33 /* MultipartFormData.swift in Sources */,
 				D5F94E3324FE1E11009E0E33 /* NetworkRouter.swift in Sources */,
 				D5F94E4224FE1F2D009E0E33 /* ErrorResponse.swift in Sources */,

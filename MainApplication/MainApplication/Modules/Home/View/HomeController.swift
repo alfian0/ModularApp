@@ -32,7 +32,15 @@ class HomeController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         
+        navigationItem.title = "Home"
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Profile", style: .plain, target: self, action: #selector(onTapProfile(_:)))
+        // MARK: Handle when get 403 unauthorize
+        NotificationCenter.default.addObserver(self, selector: #selector(onUserLogout(_:)), name: Notification.Name(NetworkingGlobalConstant.userLogout), object: nil)
+    }
+    
+    @objc
+    private func onUserLogout(_ sender: NSNotification) {
+        print("Logout")
     }
 
     @objc

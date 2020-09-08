@@ -135,9 +135,7 @@ public struct NetworkManager {
     
     private func forceLogout() {
         AuthManager.shared.deleteToken()
-//        DispatchQueue.main.async {
-//            UIApplication.shared.keyWindow?.rootViewController = LoginController()
-//        }
+        NotificationCenter.default.post(name: Notification.Name(NetworkingGlobalConstant.userLogout), object: nil)
     }
     
     private func handleNetworkResponse(_ response: HTTPURLResponse) -> Result<Bool, NetworkError> {

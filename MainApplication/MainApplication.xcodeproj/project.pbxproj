@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D5103A55250775410026B881 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5103A53250775380026B881 /* Core.framework */; };
+		D5103A56250775410026B881 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D5103A53250775380026B881 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D57A37CC250604A800318DD1 /* GenresResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57A37CB250604A800318DD1 /* GenresResponse.swift */; };
 		D57A37CE25062C8A00318DD1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D57A37CD25062C8A00318DD1 /* GoogleService-Info.plist */; };
 		D57A37D0250637E400318DD1 /* AuthManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5F94EFC24FF657C009E0E33 /* AuthManager.framework */; };
@@ -41,6 +43,7 @@
 				D57A37D8250637E800318DD1 /* Repository.framework in Embed Frameworks */,
 				D57A37D6250637E700318DD1 /* Pods_MainApplication.framework in Embed Frameworks */,
 				D57A37D4250637E500318DD1 /* Networking.framework in Embed Frameworks */,
+				D5103A56250775410026B881 /* Core.framework in Embed Frameworks */,
 				D57A37D1250637E400318DD1 /* AuthManager.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -52,6 +55,7 @@
 		1B71B7D06F84451B200D3F94 /* Pods_MainApplication.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MainApplication.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4417D584513728CD407855C9 /* Pods-MainApplication.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MainApplication.debug.xcconfig"; path = "Target Support Files/Pods-MainApplication/Pods-MainApplication.debug.xcconfig"; sourceTree = "<group>"; };
 		AB15E9522A1A820C06B545AB /* Pods-MainApplication.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MainApplication.release.xcconfig"; path = "Target Support Files/Pods-MainApplication/Pods-MainApplication.release.xcconfig"; sourceTree = "<group>"; };
+		D5103A53250775380026B881 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D57A37CB250604A800318DD1 /* GenresResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenresResponse.swift; sourceTree = "<group>"; };
 		D57A37CD25062C8A00318DD1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D5F94E7424FE26FF009E0E33 /* MainApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MainApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +85,7 @@
 				D57A37D7250637E800318DD1 /* Repository.framework in Frameworks */,
 				D57A37D5250637E700318DD1 /* Pods_MainApplication.framework in Frameworks */,
 				D57A37D3250637E500318DD1 /* Networking.framework in Frameworks */,
+				D5103A55250775410026B881 /* Core.framework in Frameworks */,
 				D57A37D0250637E400318DD1 /* AuthManager.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -133,6 +138,7 @@
 		D5F94E8B24FE2AF8009E0E33 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D5103A53250775380026B881 /* Core.framework */,
 				D5F94EFC24FF657C009E0E33 /* AuthManager.framework */,
 				D5F94EB424FE3545009E0E33 /* Repository.framework */,
 				D5F94E8C24FE2AF8009E0E33 /* Networking.framework */,
@@ -513,6 +519,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 9GE8EQEDQB;
 				INFOPLIST_FILE = MainApplication/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;

@@ -8,32 +8,8 @@
 
 import Foundation
 import Swinject
-
-protocol IAppRouter {
-    var resolver: Resolver { get }
-    
-    func presentModule(module: Module, parameters:[String:Any])
-    func resetStackToView(view: UIViewController, animated: Bool)
-    func displayViewWithoutDismiss(view: UIViewController?, animateDisplay: Bool)
-}
-
-protocol IModule {
-    func presentView(parameters: [String : Any])
-}
-
-enum Module {
-    case Home
-    case Detail
-    
-    var routePath: String {
-        switch self {
-        case .Home:
-            return "Modules/Home"
-        case .Detail:
-            return "Modules/Detail"
-        }
-    }
-}
+import Core
+import AuthManager
 
 class AppRouter: IAppRouter {
     private let assembler: Assembler!
@@ -48,12 +24,14 @@ class AppRouter: IAppRouter {
         let assembler = Assembler()
         assembler.apply(assemblies: [
             HomeAssembly(),
-            DetailAssembly()
+            DetailAssembly(),
+            ProfileAssembly()
         ])
         
         let modules: [String:(IAppRouter)->IModule] = [
-            Module.Home.routePath : {(appRouter:IAppRouter) in HomeModule(appRouter: appRouter)},
-            Module.Detail.routePath : {(appRouter:IAppRouter) in DetailModule(appRouter: appRouter)}
+            Module.Home.routePath : {(appRouter: IAppRouter) in HomeModule(appRouter: appRouter)},
+            Module.Detail.routePath : {(appRouter: IAppRouter) in DetailModule(appRouter: appRouter)},
+            Module.Profile.routePath : {(appRouter: IAppRouter) in ProfileModule(appRouter: appRouter)},
         ]
         
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { fatalError() }

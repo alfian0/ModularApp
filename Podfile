@@ -7,6 +7,16 @@ def common
   pod 'Swinject'
 end
 
+target 'Core' do
+  project 'Core/Core.xcodeproj'
+  common
+end
+
+target 'AuthManager' do
+  project 'AuthManager/AuthManager.xcodeproj'
+  common
+end
+
 target 'MainApplication' do
   project 'MainApplication/MainApplication.xcodeproj'
   common

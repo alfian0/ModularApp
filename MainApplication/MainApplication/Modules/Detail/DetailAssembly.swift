@@ -8,22 +8,23 @@
 
 import Foundation
 import Swinject
+import Core
 
-class DetailModule: IModule {
+public class DetailModule: IModule {
     let appRouter: IAppRouter
 
     init(appRouter: IAppRouter) {
         self.appRouter = appRouter
     }
 
-    func presentView(parameters: [String:Any]) {
+    public func presentView(parameters: [String:Any]) {
         let wireframe = appRouter.resolver.resolve(HomeWireframe.self, argument: appRouter)!
         wireframe.presentView()
     }
 }
 
-class DetailAssembly: Assembly {
-    func assemble(container: Container) {
+public class DetailAssembly: Assembly {
+    public func assemble(container: Container) {
         container.register(IDetailViewModel.self) { (r, id: String) in
             return DetailViewModel(with: id)
         }

@@ -141,7 +141,7 @@ class Router<EndPoint: EndPointType>: NSObject, URLSessionDelegate, NetworkRoute
         // Set SSL policies for domain name check
         let policies = NSMutableArray();
         policies.add(SecPolicyCreateSSL(true, (challenge.protectionSpace.host) as CFString))
-        SecTrustSetPolicies(serverTrust!, policies);
+        SecTrustSetPolicies(serverTrust!, policies)
 
         // Evaluate server certificate
         var result: SecTrustResultType = SecTrustResultType(rawValue: 0)!

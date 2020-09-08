@@ -8,22 +8,24 @@
 
 import Foundation
 import Swinject
+import Core
+import AuthManager
 
-class HomeModule: IModule {
+public class HomeModule: IModule {
     let appRouter: IAppRouter
 
     init(appRouter: IAppRouter) {
         self.appRouter = appRouter
     }
 
-    func presentView(parameters: [String:Any]) {
+    public func presentView(parameters: [String:Any]) {
         let wireframe = appRouter.resolver.resolve(HomeWireframe.self, argument: appRouter)!
         wireframe.presentView()
     }
 }
 
-class HomeAssembly: Assembly {
-    func assemble(container: Container) {
+public class HomeAssembly: Assembly {
+    public func assemble(container: Container) {
         container.register(IHomeViewModel.self) { r in
             return HomeViewModel()
         }
@@ -46,6 +48,11 @@ class HomeWireframe {
 
     func presentView() {
         let view = appRouter.resolver.resolve(HomeController.self)!
+        appRouter.resetStackToView(view: view, animated: true)
+    }
+    
+    func presentProfile() {
+        let view = appRouter.resolver.resolve(ProfileController.self)!
         appRouter.resetStackToView(view: view, animated: true)
     }
 }
