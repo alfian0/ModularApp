@@ -28,7 +28,7 @@ public class AuthManager: IAuthManager {
         return token
     }()
     
-    public var refreshToken: String = {
+    public var refresh: String = {
         let token = KeychainService.load(service: Constant.keychain.refreshToken, account: Constant.keychain.account) ?? ""
         return token
     }()
@@ -41,11 +41,17 @@ public class AuthManager: IAuthManager {
         KeychainService.save(service: Constant.keychain.tokenType, account: Constant.keychain.account, data: type)
         KeychainService.save(service: Constant.keychain.accessToken, account: Constant.keychain.account, data: token)
         KeychainService.save(service: Constant.keychain.refreshToken, account: Constant.keychain.account, data: refresh)
+        self.type = type
+        self.token = token
+        self.refresh = refresh
     }
     
     public func deleteToken() {
         KeychainService.remove(service: Constant.keychain.accessToken, account: Constant.keychain.account)
         KeychainService.remove(service: Constant.keychain.refreshToken, account: Constant.keychain.account)
         KeychainService.remove(service: Constant.keychain.tokenType, account: Constant.keychain.account)
+        self.type = ""
+        self.token = ""
+        self.refresh = ""
     }
 }

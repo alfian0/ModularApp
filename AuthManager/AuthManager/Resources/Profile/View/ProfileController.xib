@@ -8,9 +8,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeController" customModule="MainApplication" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileController" customModule="AuthManager" customModuleProvider="target">
             <connections>
-                <outlet property="tableView" destination="lDS-qq-RIy" id="y4d-vk-jZy"/>
+                <outlet property="tableView" destination="tV0-IC-qeU" id="swK-z0-NKx"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,17 +19,17 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lDS-qq-RIy">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tV0-IC-qeU">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="lDS-qq-RIy" secondAttribute="trailing" id="E7Z-Am-gOM"/>
-                <constraint firstItem="lDS-qq-RIy" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Msd-t4-8wO"/>
-                <constraint firstItem="lDS-qq-RIy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="cJL-eh-jPC"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="lDS-qq-RIy" secondAttribute="bottom" id="dk3-02-MoW"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="tV0-IC-qeU" secondAttribute="bottom" id="7jI-Oc-nTx"/>
+                <constraint firstItem="tV0-IC-qeU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="98M-0f-Hon"/>
+                <constraint firstItem="tV0-IC-qeU" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Q4J-cg-RFq"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tV0-IC-qeU" secondAttribute="trailing" id="QVh-rU-lHB"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="139" y="105"/>
